@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css?family=Kosugi|Permanent+Marker&display=swap');
+@import '_reset.css';
+
+html {
+  --cadmium-red: #d80026;
+  --alabama-crimson: #aa001e;
+  --selective-yellow: #fdbb01;
+  --orange: #f79d00;
+  --desert-sand: #e3c4a6;
+  --page-padding: 24px;
+  --heading-font: 'Permanent Marker', Arial, Helvetica, sans-serif;
+  --content-font: 'Kosugi', Arial, Helvetica, sans-serif;
+
+  background: var(--orange);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 190px);
+}
+.header {
+  background: var(--alabama-crimson);
+  height: 120px;
+  padding: var(--page-padding) 18px;
+}
+.content {
+  flex: 1 0 auto;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+  margin: 0 auto;
+}
+.content.confirmation {
+  margin: 200px auto 120px;
+}
+.footer-logo {
+  background: url(../images/air-sling.png) no-repeat;
+  background-size: contain;
+  color: var(--alabama-crimson);
+  margin: 0 auto;
+  font-family: var(--heading-font);
+  font-size: 36px;
+  padding-left: 36px;
+  width: fit-content;
+}
+
+h1,
+h2,
+h3,
+label,
+button {
+  color: #fff;
+  font-family: var(--heading-font);
+  font-size: 32px;
+  text-align: center;
+}
+p,
+a,
+li,
+blockquote,
+input {
+  font-family: var(--content-font);
+}
+.main {
+  position: relative;
+  margin: 0 auto;
+}
+.header-logo {
+  background-image: url(../images/air-sling.png), url(../images/logo_text.png);
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+  background-size: contain;
+  overflow: hidden;
+  text-indent: -1000px;
+  height: 60px;
+  width: 550px;
+}
+.flight-select {
+  background: var(--cadmium-red);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: var(--page-padding);
+  margin-bottom: var(--page-padding);
+}
+.flight-select input {
+  width: 125px;
+  margin-left: var(--page-padding);
+}
+
+input {
+  font-size: 24px;
+  height: 42px;
+  border: 2px solid var(--orange);
+  border-radius: 4px;
+  padding: 0 12px;
+}
+
+.plane {
+  background: #fff;
+  margin: 24px 24px 0;
+  height: 520px;
+  width: 325px;
+  padding: 48px 0;
+  position: relative;
+  border-right: 15px solid var(--alabama-crimson);
+  border-left: 15px solid var(--alabama-crimson);
+}
+
+.content .message {
+  border-bottom: 2px solid var(--alabama-crimson);
+  padding-bottom: 16px;
+  margin: -10px 0 16px;
+  color: var(--alabama-crimson);
+  font-family: var(--heading-font);
+  font-size: 20px;
+}
+.content .user-info li {
+  font-family: var(--heading-font);
+  font-size: 18px;
+  padding: 10px 0 12px;
+}
+.content .user-info li span {
+  font-family: var(--content-font);
+  font-size: 20px;
+  font-style: italic;
+  margin-left: 10px;
+}
+.content .user-info li:last-child {
+  padding-bottom: 0;
+}
+
+.tombstone {
+  background: url(../images/tombstone.png) no-repeat;
+  background-size: contain;
+  height: 220px;
+  width: 250px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  width: 100%;
+  list-style: none;
+}
+.row li:nth-child(3) {
+  margin-right: 20px;
+}
+.row li:nth-child(4) {
+  margin-left: 20px;
+}
+
+.seat {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.seat input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.seat span {
+  border-radius: 2px;
+  color: var(--cadmium-red);
+  font-family: var(--content-font);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  transition: all ease 300ms;
+}
+
+.seat span.avail {
+  background: #fff;
+  border: 1px solid var(--alabama-crimson);
+}
+
+.seat span.occupied {
+  background: var(--selective-yellow);
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.seat span.flight-seat-occupied {
+  background: var(--selective-yellow);
+  color: #fff;
+  opacity: 0.5;
+}
+
+.seat span:hover,
+.seat span.selected {
+  background: var(--alabama-crimson);
+  color: #fff;
+  font-weight: 700;
+}
+
+.user {
+  border: 3px solid var(--alabama-crimson);
+  border-radius: 5px;
+  margin: auto 12px auto 18px;
+  padding: 30px;
+  width: 400px;
+}
+
+.form-item {
+  margin-bottom: 6px;
+  width: 100%;
+  position: relative;
+}
+
+.form-item label {
+  display: none;
+}
+
+.form-item input {
+  border-radius: 3px;
+  border: 1px solid #e4e8eb;
+  box-sizing: border-box;
+  color: #464a5c;
+  font-size: 16px;
+  font-weight: 300;
+  height: 44px;
+  padding: 8px 12px 10px 12px;
+  width: 100%;
+}
+
+.form-item input::placeholder {
+  color: #999;
+}
+
+.button {
+  border-radius: 4px;
+  font-size: 16px;
+  height: 48px;
+  min-width: 48%;
+}
+.button.confirm {
+  background: var(--alabama-crimson);
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 24px;
+  width: 100%;
+}
+
+.button.confirm:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.lds-dual-ring {
+  top: 8px;
+  left: calc(52% - 15px);
+}
+
+.form-container {
+  display: none;
+}
+
+#error-message {
+  display: none;
+}
+
+#flight-select {
+  font-size: 24px;
+  height: 42px;
+  border: 2px solid var(--orange);
+  border-radius: 4px;
+  padding: 0 12px;
+  font-family: var(--content-font);
+  margin-left: 10px;
+}
+
+.flight-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flight-info {
+  width: 350px;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.admin {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+span.no-cursor {
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    width: 100px;
+  }
+}

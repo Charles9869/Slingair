@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="./images/air_icon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0, minimal-ui" />
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <title>SlingAir | Admin</title>
+</head>
+
+<body>
+  <div class='main'>
+    <header class='header'>
+      <a href="/seat-select">
+        <h1 class='header-logo'>Air Slingshot</h1>
+      </a>
+  </div>
+  <div class="container">
+    <div class="content confirmation">
+      <div class="user">
+        <ul class="user-info">
+          <li>Flight #:<span id="flight"></span> seat #: <span id="seat"></span></li>
+          <li>Name:<span id="name"></span></li>
+          <li>Email:<span id="email"></span></li>
+        </ul>
+      </div>
+    </div>
+    <form id="seats" class="flight-container">
+    </form>
+  </div>
+  <script src="./js/admin.js"></script>
+</body>
+
+</html>

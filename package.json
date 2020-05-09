@@ -1,0 +1,21 @@
+{
+  "name": "journeyedu-wksp-template",
+  "version": "0.5.0",
+  "description": "Basic environment used to build the workshops for the Node.Js Module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon -e js,ejs server.js"
+  },
+  "author": "Scott Morin <scott@journeyedu.co>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
+}
