@@ -13,7 +13,7 @@ clone using https://github.com/Charles9869/Slingair.git
 
 ## SCREENSHOTS
 
-### Main pge
+### Main page
 
 ![image](./screenshots/main.png)
 
