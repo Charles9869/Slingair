@@ -1,6 +1,6 @@
 # SlingAir
 
-This is an application where a user can book a seat inside a plane and receives a confirmation ticket.
+This is an application where a user can book a seat inside a plane and receive a confirmation ticket.
 
 ## TECH STACK
 
