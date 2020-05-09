@@ -4,7 +4,7 @@ This is an application where a user can book a seat inside a plane and receive a
 
 ## TECH STACK
 
-- HTML / CSS
+- HTML / CSS / Javascript
 - NodeJS and express
 
 ## RUN LOCALLY
