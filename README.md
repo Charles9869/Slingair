@@ -10,6 +10,7 @@ This is an application where a user can book a seat inside a plane and receive a
 ## RUN LOCALLY
 ```
 git clone https://github.com/Charles9869/Slingair.git
+yarn dev
 ```
 ## SCREENSHOTS
 
