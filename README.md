@@ -8,9 +8,9 @@ This is an application where a user can book a seat inside a plane and receive a
 - NodeJS and express
 
 ## RUN LOCALLY
-
-clone using https://github.com/Charles9869/Slingair.git
-
+```
+git clone https://github.com/Charles9869/Slingair.git
+```
 ## SCREENSHOTS
 
 ### Main page
